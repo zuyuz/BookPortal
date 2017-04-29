@@ -1,0 +1,20 @@
+﻿@model BookPortal.WebUI.Models.BooksListViewModel
+@{
+    ViewBag.Title = "Products";
+}
+@foreach (var p in Model.Books)
+{
+    <div class="well">
+        <h3>
+            <strong>@p.Title</strong>
+            <span class="pull-right label labelprimary">
+                @p.Language
+            </span>
+        </h3>
+        <span class="lead"> @p.Publisher</span>
+    </div>
+}
+<div class="btn-group pull-right">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List",
+        new { page = x, genre = Model.CurrentGenre }))
+</div>
