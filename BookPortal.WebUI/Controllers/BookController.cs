@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using BookPortal.Domain.Abstract;
 using BookPortal.Domain.Entities;
 using BookPortal.WebUI.Models;
+using System.Runtime.InteropServices;
+using System.IO;
 
 namespace BookPortal.WebUI.Controllers
 {
@@ -17,7 +19,18 @@ namespace BookPortal.WebUI.Controllers
         {
             this.repository = bookRepository;
         }
-        public ViewResult List(string genre, int page = 1)
+
+        public ActionResult ViewBook(int id)
+        {
+            var book = repository.Books.Where(b => b.Id == id).FirstOrDefault();
+            if(book == null)
+            {
+                return RedirectToAction("List");
+            }
+            return View(book);
+        }
+
+        public ActionResult List(string genre, int page = 1)
         {
             BooksListViewModel model = new BooksListViewModel
             {
@@ -38,6 +51,13 @@ namespace BookPortal.WebUI.Controllers
                 CurrentGenre = genre
             };
             return View(model);
+        }
+
+        public ActionResult Audio(string path)
+        {
+            // "D:\\FileSystem\\Audio\\Книги, що говорять (збірка) (2015-2017) [mp3]\\Казки\\Богдан Лепкий.  Мишка (казка для дітей, для малих і великих).mp3"
+            var videoData = System.IO.File.ReadAllBytes(path);
+            return File(videoData, "video/mp4");
         }
     }
 }

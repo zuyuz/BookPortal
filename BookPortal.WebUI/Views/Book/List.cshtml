@@ -2,19 +2,26 @@
 @{
     ViewBag.Title = "Products";
 }
-@foreach (var p in Model.Books)
-{
-    <div class="well">
-        <h3>
-            <strong>@p.Title</strong>
-            <span class="pull-right label labelprimary">
-                @p.Language
-            </span>
-        </h3>
-        <span class="lead"> @p.Publisher</span>
+<div class="row panel">
+    <div id="categories" class="col-xs-3">
+        @Html.Action("Menu", "Nav")
     </div>
-}
-<div class="btn-group pull-right">
-    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List",
-        new { page = x, genre = Model.CurrentGenre }))
+    <div class="col-xs-8">
+        @foreach (var p in Model.Books)
+        {
+            <div class="well">
+                <h3>
+                    <strong>@Html.ActionLink(p.Title, "ViewBook", new { id = p.Id })</strong>
+                    <span class="pull-right label labelprimary">
+                        @p.Language
+                    </span>
+                </h3>
+                <span class="lead"> @p.Publisher</span>
+            </div>
+        }
+        <div class="btn-group pull-right">
+            @Html.PageLinks(Model.PagingInfo, x => Url.Action("List",
+                new { page = x, genre = Model.CurrentGenre }))
+        </div>
+    </div>
 </div>

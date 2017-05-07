@@ -6,6 +6,21 @@ namespace BookPortal.Domain.Entities
 {
     public class Book
     {
+        public Book() { }
+
+        public Book(string path)
+        {
+            Id = 0;
+            Title = "NewTitle";
+            Author = "NewAuthor";
+            Country = "Ukraine";
+            Language = "UKR";
+            Genre = "NewGenre";
+            Publisher = "NewPublisher";
+            Published = DateTime.Now;
+            PathToFile = path;
+        }
+
         [HiddenInput(DisplayValue = false)]
         public int Id { get; set; }
         [Required(ErrorMessage = "Please enter a title")]
@@ -20,5 +35,6 @@ namespace BookPortal.Domain.Entities
         public string Genre { get; set; }
         public string Publisher { get; set; }
         public DateTime Published { get; set; }
+        public string PathToFile { get; set; }
     }
 }

@@ -1,0 +1,83 @@
+﻿@model BookPortal.Domain.Entities.Book
+
+@{
+    ViewBag.Title = "ViewBook";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Language)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Language)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Publisher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Publisher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Published)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Published)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PathToFile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PathToFile)
+        </dd>
+
+    </dl>
+    <video controls autoplay>
+        <source src="@Url.Action("Audio", "Book", new { path = Model.PathToFile })" type="video/mp4" />
+        (Fallback content for old browsers...)
+    </video>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "List")
+</p>
