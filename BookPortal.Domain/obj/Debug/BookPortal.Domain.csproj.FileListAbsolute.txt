@@ -30,4 +30,16 @@ D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookP
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.dll
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.pdb
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.Migrations.PathToFile.resources
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.dll
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Security.dll
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.xml
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Security.xml
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.csprojResolveAssemblyReference.cache
