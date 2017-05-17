@@ -5,7 +5,7 @@ using BookPortal.Domain.Entities;
 
 namespace BookPortal.WebUI.Controllers
 {
-    [Authorize(Roles = "Administrators")]
+    //[Authorize(Roles = "Administrators")]
     public class AdminController : Controller
     {
         private IBookRepository repository;

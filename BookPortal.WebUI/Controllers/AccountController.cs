@@ -11,7 +11,6 @@ using BookPortal.Domain.Entities;
 
 namespace BookPortal.WebUI.Controllers
 {
-    [Authorize]
     public class AccountController : Controller
     {
         [AllowAnonymous]
@@ -46,7 +45,8 @@ namespace BookPortal.WebUI.Controllers
                     {
                         IsPersistent = false
                     }, ident);
-                    return Redirect(returnUrl);
+
+                    return RedirectToAction("List", "Book");
                 }
             }
             ViewBag.returnUrl = returnUrl;
@@ -57,7 +57,39 @@ namespace BookPortal.WebUI.Controllers
         public ActionResult Logout()
         {
             AuthManager.SignOut();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("List", "Book");
+        }
+
+        public ActionResult SignUp()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<ActionResult> SignUp(CreateModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                AppUser user = new AppUser { UserName = model.Name, Email = model.Email };
+                IdentityResult result = await UserManager.CreateAsync(user,
+                model.Password);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    AddErrorsFromResult(result);
+                }
+            }
+            return View(model);
+        }
+
+        private void AddErrorsFromResult(IdentityResult result)
+        {
+            foreach (string error in result.Errors)
+            {
+                ModelState.AddModelError("", error);
+            }
         }
 
         private IAuthenticationManager AuthManager

@@ -42,4 +42,5 @@ D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Micro
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Security.xml
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Security.OAuth.xml
-D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.csprojResolveAssemblyReference.cache
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.Migrations.InitialCreate.resources
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.Migrations.RolesAndUsers.resources

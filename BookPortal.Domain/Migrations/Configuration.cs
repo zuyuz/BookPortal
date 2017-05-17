@@ -5,14 +5,15 @@ namespace BookPortal.Domain.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<BookPortal.Domain.Concrete.EFDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<BookPortal.Domain.Concrete.AppIdentityDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "BookPortal.Domain.Concrete.AppIdentityDbContext";
         }
 
-        protected override void Seed(BookPortal.Domain.Concrete.EFDbContext context)
+        protected override void Seed(BookPortal.Domain.Concrete.AppIdentityDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

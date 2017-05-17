@@ -33,7 +33,7 @@ namespace BookPortal.Domain.Concrete
             AppRoleManager roleMgr = new AppRoleManager(new RoleStore<AppRole>(context));
             string roleName = "Administrators";
             string userName = "Admin";
-            string password = "MySecret";
+            string password = "password";
             string email = "admin@example.com";
             if (!roleMgr.RoleExists(roleName))
             {
@@ -43,7 +43,27 @@ namespace BookPortal.Domain.Concrete
             if (user == null)
             {
                 userMgr.Create(new AppUser { UserName = userName, Email = email },
-                password);
+                    password);
+                user = userMgr.FindByName(userName);
+            }
+            if (!userMgr.IsInRole(user.Id, roleName))
+            {
+                userMgr.AddToRole(user.Id, roleName);
+            }
+
+            roleName = "Users";
+            userName = "User";
+            password = "password";
+            email = "user@example.com";
+            if (!roleMgr.RoleExists(roleName))
+            {
+                roleMgr.Create(new AppRole(roleName));
+            }
+            user = userMgr.FindByName(userName);
+            if (user == null)
+            {
+                userMgr.Create(new AppUser { UserName = userName, Email = email },
+                    password);
                 user = userMgr.FindByName(userName);
             }
             if (!userMgr.IsInRole(user.Id, roleName))
