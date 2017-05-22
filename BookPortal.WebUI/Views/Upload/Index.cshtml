@@ -8,7 +8,6 @@
     @Scripts.Render("~/Scripts/aurigma.imageuploaderflash.min.js")
     @Scripts.Render("~/Scripts/aurigma.htmluploader.control.js")
 }
-<h2>HTML5/Flash Uploader</h2>
 
 <script type="text/javascript">
 
@@ -23,7 +22,13 @@
    ],
         uploadSettings: {
             actionUrl: '@Url.Action("Add", "Upload")'
+        },
+        restrictions: {
+            fileMask: [
+                ['Images (*.mp?)', '*.mp?']]
         }
+
     });
+
     uploader.writeHtml();
 </script>

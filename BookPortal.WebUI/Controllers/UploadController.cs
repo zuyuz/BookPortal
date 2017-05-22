@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace BookPortal.WebUI.Controllers
 {
+    [Authorize]
     public class UploadController : Controller
     {
         private IBookRepository repository;

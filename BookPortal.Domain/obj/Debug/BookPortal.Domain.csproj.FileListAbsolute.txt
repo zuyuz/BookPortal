@@ -25,11 +25,8 @@ D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Syste
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\System.Web.WebPages.xml
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\System.Web.WebPages.Razor.xml
-D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.Migrations.Some.resources
-D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.csproj.GenerateResource.Cache
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.dll
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.pdb
-D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.Migrations.PathToFile.resources
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.dll
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
@@ -42,5 +39,6 @@ D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Micro
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Security.xml
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Security.OAuth.xml
-D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.Migrations.InitialCreate.resources
-D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.Migrations.RolesAndUsers.resources
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.Migrations.Identity.resources
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.csproj.GenerateResource.Cache
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.csprojResolveAssemblyReference.cache

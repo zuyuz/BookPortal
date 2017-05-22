@@ -10,18 +10,12 @@ namespace BookPortal.WebUI.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            return View(GetData("Index"));
+            return View(GetData());
         }
-        [Authorize(Roles = "Users")]
-        public ActionResult OtherAction()
-        {
-            return View("Index", GetData("OtherAction"));
-        }
-        private Dictionary<string, object> GetData(string actionName)
+        private Dictionary<string, object> GetData()
         {
             Dictionary<string, object> dict
             = new Dictionary<string, object>();
-            dict.Add("Action", actionName);
             dict.Add("User", HttpContext.User.Identity.Name);
             dict.Add("Authenticated", HttpContext.User.Identity.IsAuthenticated);
             dict.Add("Auth Type", HttpContext.User.Identity.AuthenticationType);

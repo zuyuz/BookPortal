@@ -1,7 +1,7 @@
 ﻿@model BookPortal.Domain.Entities.Book
 @{
     ViewBag.Title = "Admin: Edit " + @Model.Title;
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="panel">
     <div class="panel-heading">
@@ -17,23 +17,26 @@
                     <div class="form-group">
                         <label>
                             @(property.DisplayName ??
-property.PropertyName)
+                                property.PropertyName)
                         </label>
                         @if (property.PropertyName == "Genre")
                         {
                             @Html.TextArea(property.PropertyName, null,
-new { @class = "form-control", rows = 5 })
+                                new { @class = "form-control", rows = 5 })
                         }
                         else
                         {
                             @Html.TextBox(property.PropertyName, null,
-new { @class = "form-control" })
+                                new { @class = "form-control" })
                         }
                         @Html.ValidationMessage(property.PropertyName)
                     </div>
                 }
             }
         </div>
+
+        @Html.Partial("_UploadViewPartial")
+
         <div class="panel-footer">
             <input type="submit" value="Save" class="btn btn-primary" />
             @Html.ActionLink("Cancel and return to List", "Index", "UserInfo", null,

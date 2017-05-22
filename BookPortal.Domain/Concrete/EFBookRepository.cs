@@ -1,6 +1,10 @@
 ﻿using BookPortal.Domain.Abstract;
 using BookPortal.Domain.Entities;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace BookPortal.Domain.Concrete
 {
@@ -21,7 +25,7 @@ namespace BookPortal.Domain.Concrete
             else
             {
                 Book dbEntry =
-                context.Books.Find(product.Id);
+                    context.Books.Find(product.Id);
                 if (dbEntry != null)
                 {
                     dbEntry.Title = product.Title;
@@ -42,5 +46,6 @@ namespace BookPortal.Domain.Concrete
             }
             return dbEntry;
         }
+        
     }
 }

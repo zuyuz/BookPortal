@@ -330,6 +330,9 @@
     <Content Include="Views\RoleAdmin\Edit.cshtml" />
     <Content Include="Views\UserInfo\Index.cshtml" />
     <Content Include="Views\Account\SignUp.cshtml" />
+    <Content Include="Views\Account\ViewProfile.cshtml" />
+    <Content Include="Views\Shared\_UploadViewPartial.cshtml" />
+    <Content Include="Views\Shared\_Pager.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

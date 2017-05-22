@@ -10,5 +10,6 @@ namespace BookPortal.Domain.Entities
     public class AppUser : IdentityUser
     {
         // additional properties will go here
+
     }
 }

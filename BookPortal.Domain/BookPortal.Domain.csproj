@@ -124,24 +124,15 @@
     <Compile Include="Entities\AppRole.cs" />
     <Compile Include="Entities\AppUser.cs" />
     <Compile Include="Entities\Book.cs" />
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Post.cs" />
+    <Compile Include="Entities\Tag.cs" />
     <Compile Include="Infrastructure\AppRoleManager.cs" />
     <Compile Include="Infrastructure\AppUserManager.cs" />
     <Compile Include="Infrastructure\IdentityHelpers.cs" />
-    <Compile Include="Migrations\201704291445065_Some.cs" />
-    <Compile Include="Migrations\201704291445065_Some.Designer.cs">
-      <DependentUpon>201704291445065_Some.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705061912479_PathToFile.cs" />
-    <Compile Include="Migrations\201705061912479_PathToFile.Designer.cs">
-      <DependentUpon>201705061912479_PathToFile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705091813062_InitialCreate.cs" />
-    <Compile Include="Migrations\201705091813062_InitialCreate.Designer.cs">
-      <DependentUpon>201705091813062_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705102244220_RolesAndUsers.cs" />
-    <Compile Include="Migrations\201705102244220_RolesAndUsers.Designer.cs">
-      <DependentUpon>201705102244220_RolesAndUsers.cs</DependentUpon>
+    <Compile Include="Migrations\201705222229160_Identity.cs" />
+    <Compile Include="Migrations\201705222229160_Identity.Designer.cs">
+      <DependentUpon>201705222229160_Identity.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -155,17 +146,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201704291445065_Some.resx">
-      <DependentUpon>201704291445065_Some.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705061912479_PathToFile.resx">
-      <DependentUpon>201705061912479_PathToFile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705091813062_InitialCreate.resx">
-      <DependentUpon>201705091813062_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705102244220_RolesAndUsers.resx">
-      <DependentUpon>201705102244220_RolesAndUsers.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705222229160_Identity.resx">
+      <DependentUpon>201705222229160_Identity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

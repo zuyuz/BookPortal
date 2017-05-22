@@ -20,7 +20,7 @@ namespace BookPortal.Domain.Concrete
         //public System.Data.Entity.DbSet<BookPortal.Domain.Entities.AppUser> AppUsers { get; set; }
     }
     public class IdentityDbInit
-    : DropCreateDatabaseIfModelChanges<AppIdentityDbContext>
+        : DropCreateDatabaseIfModelChanges<AppIdentityDbContext>
     {
         protected override void Seed(AppIdentityDbContext context)
         {

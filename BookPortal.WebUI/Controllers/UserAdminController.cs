@@ -12,6 +12,7 @@ using System.Web.Mvc;
 
 namespace BookPortal.WebUI.Controllers
 {
+    [Authorize(Roles = "Administrators")]
     public class UserAdminController : Controller
     {
         // GET: UserAdmin

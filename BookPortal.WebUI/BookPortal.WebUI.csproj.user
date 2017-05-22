@@ -10,7 +10,7 @@
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
     <ProjectView>ShowAllFiles</ProjectView>
-    <WebStackScaffolding_DbContextTypeFullName>BookPortal.Domain.Concrete.AppIdentityDbContext</WebStackScaffolding_DbContextTypeFullName>
+    <WebStackScaffolding_DbContextTypeFullName>BookPortal.Domain.Concrete.EFDbContext</WebStackScaffolding_DbContextTypeFullName>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

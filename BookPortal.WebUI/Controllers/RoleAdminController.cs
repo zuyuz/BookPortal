@@ -12,7 +12,7 @@ using BookPortal.WebUI.Models;
 
 namespace BookPortal.WebUI.Controllers
 {
-    //[Authorize(Roles = "Administrators")]
+    [Authorize(Roles = "Administrators")]
     public class RoleAdminController : Controller
     {
         public ActionResult Index()
