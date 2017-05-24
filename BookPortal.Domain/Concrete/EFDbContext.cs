@@ -11,5 +11,7 @@ namespace BookPortal.Domain.Concrete
     public class EFDbContext : DbContext
     {
         public DbSet<Book> Books { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        
     }
 }

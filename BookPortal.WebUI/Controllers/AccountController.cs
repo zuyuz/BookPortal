@@ -75,11 +75,12 @@ namespace BookPortal.WebUI.Controllers
             AuthManager.SignOut();
             return RedirectToAction("List", "Book");
         }
-
+        [AllowAnonymous]
         public ActionResult SignUp()
         {
             return View();
         }
+        [AllowAnonymous]
         [HttpPost]
         public async Task<ActionResult> SignUp(CreateModel model)
         {

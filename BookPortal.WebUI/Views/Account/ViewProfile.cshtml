@@ -3,13 +3,35 @@
     ViewBag.Title = "ViewProfile";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div id="categories" class="col-xs-2">
+    @if (HttpContext.Current.User.IsInRole("Administrators"))
+    {
+        @Html.ActionLink("User Admin", "Index", "UserAdmin", null,
+                    new { @class = "btn btn-block btn-default btn-lg" })
+        @Html.ActionLink("Role Admin", "Index", "RoleAdmin", null,
+                    new { @class = "btn btn-block btn-default btn-lg" })
+    }
+    @Html.ActionLink("Book Admin", "Index", "Admin", null,
+                new { @class = "btn btn-block btn-default btn-lg" })
+    @Html.ActionLink("Posts Admin", "ViewPost", "Blog", null,
+                new { @class = "btn btn-block btn-default btn-lg" })
+</div>
+<div class="col-xs-10">
+    <div class="panel panel-primary">
+        <div class="panel-heading">User Details</div>
+        <table class="table table-striped">
+            @foreach (string key in Model.Keys)
+            {
+                <tr>
+                    <th>@key</th>
+                    <td>@Model[key]</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="">
 
-<h2>View Profile</h2>
-
-<div class="panel panel-primary">
-    <div class="panel-heading">User Details</div>
-    <table class="table table-striped">
-
-    </table>
+    </div>
+    @Html.ActionLink("Sign Out", "Logout", "Account", null, new { @class = "btn btn-primary" })
 </div>
 

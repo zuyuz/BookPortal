@@ -1,0 +1,10 @@
+﻿@helper Tags(System.Web.Mvc.HtmlHelper htmlHelper,
+    IList<BookPortal.Domain.Entities.Tag> tags)
+{
+foreach (var tag in tags)
+{
+        <div class="tags-div">
+            @BookPortal.WebUI.ActionLinkExtensions.TagLink(htmlHelper, tag)
+        </div>
+}
+}

@@ -59,5 +59,30 @@ namespace BookPortal.WebUI.Controllers
             var videoData = System.IO.File.ReadAllBytes(path);
             return File(videoData, "video/mp4");
         }
+
+        [HttpGet]
+        public ActionResult UploadNewBook()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Add()
+        {
+            for (int i = 0;
+             i < Convert.ToInt32(Request.Form["PackageFileCount"]);
+             i++)
+            {
+                if (Request.Form["File0Mode_" + i] != "sourceFile")
+                    throw
+                      new Exception("Uploader expects to send original files.");
+                Book newBook = Storage.SaveUploadedFile(Server.MapPath("/Files"),
+                                           Request.Files["File0_" + i]);
+
+                repository.SaveBook(newBook);
+            }
+            Response.Write("Upload Complete");
+            return null;
+        }
     }
 }

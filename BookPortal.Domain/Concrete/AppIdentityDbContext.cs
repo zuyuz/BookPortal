@@ -11,7 +11,8 @@ namespace BookPortal.Domain.Concrete
         public AppIdentityDbContext() : base("IdentityDb") { }
         static AppIdentityDbContext()
         {
-            Database.SetInitializer<AppIdentityDbContext>(new IdentityDbInit());
+            Database.SetInitializer<IdentityDbContext<AppUser>>(
+                new DropCreateDatabaseAlways<IdentityDbContext<AppUser>>());
         }
         public static AppIdentityDbContext Create()
         {

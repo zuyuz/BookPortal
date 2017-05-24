@@ -1,0 +1,76 @@
+﻿@model IEnumerable<BookPortal.Domain.Entities.Post>
+
+@{
+    ViewBag.Title = "ViewPost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ViewPost</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddPost")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShortDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Meta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrlSlug)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Published)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modified)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShortDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Meta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrlSlug)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Published)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modified)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditPost", new { id=item.Id }) |
+            @Html.ActionLink("Details", "PostDetails", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "DeletePost", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

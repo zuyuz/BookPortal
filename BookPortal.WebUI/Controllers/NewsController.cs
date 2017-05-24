@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookPortal.Domain.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,17 @@ namespace BookPortal.WebUI.Controllers
 {
     public class NewsController : Controller
     {
-        // GET: News
+        private readonly IBookRepository _bookRepository;
+
+        public NewsController(IBookRepository blogRepository)
+        {
+            _bookRepository = blogRepository;
+        }
+
         public ActionResult Index()
         {
-            return View();
+            var posts = _bookRepository.Posts;
+            return View(posts);
         }
     }
 }

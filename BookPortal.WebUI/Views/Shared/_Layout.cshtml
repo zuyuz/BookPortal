@@ -18,13 +18,13 @@
                 <li><a href="~/Book/List">Books</a></li>
                 @if (HttpContext.Current.User.Identity.IsAuthenticated)
                 {
-                    <li><a href="~/Upload/Index">Upload Book</a></li>
+                    <li><a href="~/Book/UploadNewBook">Upload Book</a></li>
                 }
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (HttpContext.Current.User.Identity.IsAuthenticated)
                 {
-                    <li><a href="~/UserInfo/Index"><span class="glyphicon glyphicon-info-sign"></span> Profile</a></li>
+                    <li><a href="~/Account/ViewProfile"><span class="glyphicon glyphicon-info-sign"></span> Profile</a></li>
                     <li><a href="~/Account/Logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
                 }
                 else
@@ -36,16 +36,12 @@
         </div>
     </nav>
     <div class="row panel">
-        <div id="categories" class="col-xs-2">
-            @Html.ActionLink("User Admin", "Index", "UserAdmin", null,
-                new { @class = "btn btn-block btn-default btn-lg" })
-            @Html.ActionLink("Role Admin", "Index", "RoleAdmin", null,
-                new { @class = "btn btn-block btn-default btn-lg" }),
-            @Html.ActionLink("Book Admin", "Index", "Admin", null,
-                new { @class = "btn btn-block btn-default btn-lg" })
+        <div id="categories" class="col-xs-1">
         </div>
         <div class="col-xs-10">
             @RenderBody()
+        </div>
+        <div id="categories" class="col-xs-1">
         </div>
     </div>
 </body>

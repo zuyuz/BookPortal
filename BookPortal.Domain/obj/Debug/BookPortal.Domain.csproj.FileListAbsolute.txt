@@ -41,4 +41,6 @@ D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Micro
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.Migrations.Identity.resources
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.csproj.GenerateResource.Cache
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.Migrations.AddedPostsContext.resources
 D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.csprojResolveAssemblyReference.cache
+D:\Studying\Projects\Курсова\BookPortal\BookPortal.Domain\obj\Debug\BookPortal.Domain.Migrations.AppIdentity.resources

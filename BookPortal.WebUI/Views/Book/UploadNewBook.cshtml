@@ -1,0 +1,34 @@
+﻿@using System.Web.Optimization
+
+@{
+    ViewBag.Title = "Uploading new book";
+}
+@{
+    @Styles.Render("~/Scripts/css/aurigma.htmluploader.control.css")
+    @Scripts.Render("~/Scripts/aurigma.imageuploaderflash.min.js")
+    @Scripts.Render("~/Scripts/aurigma.htmluploader.control.js")
+}
+
+<script type="text/javascript">
+
+    var uploader = $au.imageUploaderFlash({
+        id: 'Uploader1',
+
+        licenseKey: 'XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXXX',
+        width: '100%',
+        height: '500px',
+        converters: [
+       { mode: '*.*=SourceFile' }
+   ],
+        uploadSettings: {
+            actionUrl: '@Url.Action("Add", "Book")'
+        },
+        restrictions: {
+            fileMask: [
+                ['Images (*.mp?)', '*.mp?']]
+        }
+
+    });
+
+    uploader.writeHtml();
+</script>

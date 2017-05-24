@@ -225,6 +225,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="App_Code\Helpers.cshtml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\aurigma.htmluploader.control.js" />
     <Content Include="Scripts\aurigma.imageuploaderflash.amazons3.js" />
@@ -268,20 +269,21 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionLinkExtensions.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\FileUploadController.cs" />
     <Compile Include="Controllers\NavController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\RecordRequestController.cs" />
     <Compile Include="Controllers\RoleAdminController.cs" />
-    <Compile Include="Controllers\UploadController.cs" />
     <Compile Include="Controllers\UserAdminController.cs" />
-    <Compile Include="Controllers\UserInfoController.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -289,6 +291,7 @@
     <Compile Include="Infrastructure\IdentityHelpers.cs" />
     <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
     <Compile Include="Models\BooksListViewModel.cs" />
+    <Compile Include="Models\ListViewModel.cs" />
     <Compile Include="Models\PagingInfo.cs" />
     <Compile Include="Models\Storage.cs" />
     <Compile Include="Models\UserViewModels.cs" />
@@ -317,7 +320,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\RecordRequest\Index.cshtml" />
-    <Content Include="Views\Upload\Index.cshtml" />
     <Content Include="Views\Book\Audio.cshtml" />
     <Content Include="Views\Book\ViewBook.cshtml" />
     <Content Include="Views\UserAdmin\Index.cshtml" />
@@ -328,11 +330,18 @@
     <Content Include="Views\RoleAdmin\Index.cshtml" />
     <Content Include="Views\RoleAdmin\Create.cshtml" />
     <Content Include="Views\RoleAdmin\Edit.cshtml" />
-    <Content Include="Views\UserInfo\Index.cshtml" />
     <Content Include="Views\Account\SignUp.cshtml" />
     <Content Include="Views\Account\ViewProfile.cshtml" />
     <Content Include="Views\Shared\_UploadViewPartial.cshtml" />
     <Content Include="Views\Shared\_Pager.cshtml" />
+    <Content Include="Views\Blog\List.cshtml" />
+    <Content Include="Views\Shared\_PostTemplate.cshtml" />
+    <Content Include="Views\Blog\AddPost.cshtml" />
+    <Content Include="Views\Blog\ViewPost.cshtml" />
+    <Content Include="Views\Blog\EditPost.cshtml" />
+    <Content Include="Views\Blog\PostDetails.cshtml" />
+    <Content Include="Views\Blog\DeletePost.cshtml" />
+    <Content Include="Views\Book\UploadNewBook.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -134,6 +134,14 @@
     <Compile Include="Migrations\201705222229160_Identity.Designer.cs">
       <DependentUpon>201705222229160_Identity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705222302266_AddedPostsContext.cs" />
+    <Compile Include="Migrations\201705222302266_AddedPostsContext.Designer.cs">
+      <DependentUpon>201705222302266_AddedPostsContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705232055076_AppIdentity.cs" />
+    <Compile Include="Migrations\201705232055076_AppIdentity.Designer.cs">
+      <DependentUpon>201705232055076_AppIdentity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -148,6 +156,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705222229160_Identity.resx">
       <DependentUpon>201705222229160_Identity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705222302266_AddedPostsContext.resx">
+      <DependentUpon>201705222302266_AddedPostsContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705232055076_AppIdentity.resx">
+      <DependentUpon>201705232055076_AppIdentity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
